@@ -54,12 +54,12 @@ void os_getArtEui (u1_t* buf) {memcpy_P(buf, APPEUI, 8);}
 /* Dev EUI */
 //Little endian format (LSB) when using LMIC library
 //Chirpstack will give a Big Endian format. Convert to little endian (e.g., http:// https://www.save-editor.com/tools/wse_hex.html)
-static const u1_t PROGMEM DEVEUI[8]={0x90,0x09,0x56,0xdf,0x0d,0x69,0x64,0x9f}; //Fill in your DevEUI
+static const u1_t PROGMEM DEVEUI[8]={0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}; //Fill in your DevEUI
 void os_getDevEui (u1_t* buf) {memcpy_P(buf, DEVEUI, 8);}
 
 /* App Key */
 // Big endian format (MSB) when using LMIC library
-static const u1_t PROGMEM APPKEY[16] = {0xb3, 0x5d, 0xff, 0x8d, 0x87, 0xa7, 0x46, 0xb8, 0x9a, 0x89, 0x68, 0x38, 0x47, 0x33, 0xce, 0xf3};
+static const u1_t PROGMEM APPKEY[16] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 void os_getDevKey (u1_t* buf) {memcpy_P(buf, APPKEY, 16);}
 
 /*---------------------------------------------------*\
